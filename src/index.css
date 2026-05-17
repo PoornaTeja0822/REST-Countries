@@ -1,0 +1,32 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap);
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+
+    --color-light-text: hsl(200, 15%, 8%);
+    --color-light-element: hsl(0, 0%, 100%);
+    --color-light-bg: hsl(0, 0%, 98%);
+    --color-light-input: hsl(0, 0%, 52%);
+    --color-dark-text: hsl(0, 0%, 100%);
+    --color-dark-element: hsl(209, 23%, 22%);
+    --color-dark-bg: hsl(207, 26%, 17%);
+
+    --default-font-family: "Nunito Sans", "Sans-serif";
+
+}
+
+@layer components {
+    body {
+        @apply bg-light-bg dark:bg-dark-bg;
+    }
+}
+
+.text {
+    @apply text-light-text dark:text-dark-text;
+}
+
+.element {
+    @apply bg-light-element dark:bg-dark-element;
+}
